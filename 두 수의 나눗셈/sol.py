@@ -11,17 +11,3 @@ real_answer = answer[0:5]
 
 - // 연산자는 정수 나눗셈으로, 소숫점 이하를 버림. 따라서 나누기 연산 /를 사용해야 함.
 - real_answer = answer[0:5]는 리스트의 앞 5개 요소만 선택함.
-
-def solution(num1, num2):
-    answer = []
-    
-    for i in str(num1 // num2 * 1000):
-        answer.append(i)
-
-if '.' in answer:
-    first_index = answer.index('.')
-    real_answer = ''.join(answer[:first_index])
-else:
-    real_answer = ''.join(answer)
-
-return int(real_answer)
