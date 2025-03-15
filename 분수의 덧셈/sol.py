@@ -7,6 +7,9 @@ def solution(numer1, denom1, numer2, denom2):
         new_frac1 = [new_numer1, new_denom1]
         return new_frac1
 
+    # 코드 간결화
+    # return [numer2 * (denom1 // denom2) + numer1, denom2 * (denom1 // denom2) if denom1 % denom2 == 0 and denom1 != 1  and denom2 != 1]
+
     # denom1이 denom2의 약수고, 어느 분모도 1이 아닌 경우
     elif denom2 % denom1 == 0 and denom1 != 1  and denom2 != 1:
         new_denom2 = denom1 * (denom2 // denom1)
