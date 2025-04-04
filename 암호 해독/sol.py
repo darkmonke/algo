@@ -1,3 +1,7 @@
 def solution(cipher, code):
-    answer = ''
-    return answer
+    answer = []
+
+    for i in range(1, 1001):
+        answer.append(cipher[(code-1) * i])
+
+    return ''.join(answer)
