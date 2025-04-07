@@ -11,6 +11,8 @@ def solution(my_string):
     my_string_rv = my_string[::-1]
 
     for i in my_string_rv:
-        if n 
-    answer = ''
-    return answer
+        while my_string_rv.count(i) >= 2:
+            my_string.replace(i, "")
+            if my_string_rv.count(i) ==1:
+                break
+    return my_string_rv[::-1]
