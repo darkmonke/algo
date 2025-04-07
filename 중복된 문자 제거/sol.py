@@ -11,8 +11,10 @@ def solution(my_string):
     my_string_rv = my_string[::-1]
 
     for i in my_string_rv:
-        while my_string_rv.count(i) >= 2:
-            my_string.replace(i, "")
-            if my_string_rv.count(i) ==1:
-                break
-    return my_string_rv[::-1]
+        if my_string_rv.count(i) >= 2:
+            my_string_rv.replace(i, "")
+        elif my_string_rv.count(i) == 1:
+            return my_string_rv[::-1]
+
+# 오류 이유
+# 파이썬에서 문자열은 불변(immutable). 즉 `my_string.replace(i, "")`는 원본 문자열을 수정하지 않고 새로운 문자열을 반환하는데, 위 코드에서는 이 결과를 저장하지 않음.
