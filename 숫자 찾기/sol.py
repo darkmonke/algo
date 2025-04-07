@@ -5,3 +5,5 @@ def solution(num, k):
             return len(new_str[0:k])
         else:
             return -1
+        
+# 4번 라인이 잘못됨.
